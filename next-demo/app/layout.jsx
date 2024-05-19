@@ -1,4 +1,5 @@
 
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import 'tailwindcss/tailwind.css';
 
@@ -12,7 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="container">{children}</body>
+      <body>
+        <Navbar />
+        <main className="container">
+        {children}
+        </main>
+        </body>
     </html>
   );
 }
